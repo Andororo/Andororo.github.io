@@ -60,6 +60,14 @@
 .card:hover .servicesIcon {
     color: #C02A2A;
 }
+.card-body {
+    padding: 20px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    height: 235px
+  }
 .servicesText:hover {
     border: 1px solid #C02A2A;
 }
@@ -85,10 +93,28 @@
     color: #0077b7;
 }
 
-
 .fab {
     color: #000000;
 }
+
+.aboutMe p {
+    font-family: Arial, sans-serif;
+    font-size: 17px;
+    color: #333;
+}
+
+.col-md-9 li {
+    font-family: Arial, sans-serif;
+    font-size: 17px;
+    color: #333;
+}
+
+.col-lg-8 p {
+    font-family: Arial, sans-serif;
+    font-size: 17px;
+    color: #333;
+}
+
 /* footer styling */
 #footer {
     background-color: #808080;
