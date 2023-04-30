@@ -3,6 +3,29 @@
     background-color: black;
 }
 
+/* style for the black bar */
+.black-bar {
+background-color: black;
+height: 64px;
+width: 100%;
+position: fixed;
+top: 0;
+left: 0;
+z-index: 999;
+}
+
+.pdf-container {
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .pdf-document {
+    width: 90%;
+    height: 90%;
+  }
+
 /* hero background image */
 .bgimage {
     height:100vh;
@@ -117,6 +140,7 @@
 
 /* footer styling */
 #footer {
+    height: 70px;
     background-color: #808080;
     text-align: center;
 }

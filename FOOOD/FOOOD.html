@@ -1,9 +1,70 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Title</title>
-  </head>
-  <body>
-    <h1>This is a Heading</h1>
-  </body>
+<html lang="en">
+<head>
+  <title>Portfolio Website-Andrew</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- linking css file -->
+  <link rel="stylesheet" href="/style.css">
+  <!-- bootstrap CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- font awesome -->
+  <script src="https://kit.fontawesome.com/31149d48b0.js" crossorigin="anonymous"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+  </style>
+</head>
+
+
+<body>
+    <div class = "black-bar"></div>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark navbarScroll">
+        <div class="container">
+            <a class="navbar-brand" href="#">Andrew</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/index.html#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/index.html#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/index.html#portfolio">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/index.html#contact">Contact</a>
+                    </li>
+                </ul>
+                
+            </div>
+        </div>
+    </nav>
+
+    <section id = "Application">
+      <div class="pdf-container">
+        <embed class="pdf-document" src="FOOOD FINAL REPORT.pdf" type="application/pdf" />
+      </div>
+    </section>
+    <!-- footer section-->
+    <footer id="footer">
+      <div class="container-fluid">
+          <!-- social media icons -->
+          <div class="social-icons mt-4">
+              <a href="https://www.linkedin.com/in/andrewphamm" target="_blank"><i class="fab fa-linkedin"></i></a>
+          </div>
+      </div>
+    </footer>
+    <!-- load javascript after loading all html content -->
+    <script src="/script/script.js"></script>
+
+</body>
+
 </html>
