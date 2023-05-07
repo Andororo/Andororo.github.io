@@ -26,28 +26,6 @@
             presence: { allowEmpty: false }
         }
     };
- 
-    const form = document.getElementById('contact-form');
- 
-    form.addEventListener('submit', function (event) {
-      const formValues = {
-          name: form.elements.name.value,
-          email: form.elements.email.value,
-          message: form.elements.message.value
-      };
- 
-      const errors = validate(formValues, constraints);
- 
-      if (errors) {
-        event.preventDefault();
-        const errorMessage = Object
-            .values(errors)
-            .map(function (fieldValues) { return fieldValues.join(', ')})
-            .join("\n");
- 
-        alert(errorMessage);
-      }
-    }, false);
  </script>
 
 <body>
@@ -82,7 +60,7 @@
         <div class="container-fluid">
             <div class="row">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 hero-text">
-                <h2 class="hero_title">Hi, it's Uncle Drew <br>What it do?</h2>
+                <div class="hero_title">Welcome!</div>
             </div>
             </div>
         </div>
@@ -245,7 +223,7 @@
                         <img class="card-img-top" src="images/portfolioImage3.jpg" alt="Card image" style="width:100%; height: 232px">
                         <div class="card-body">
                             <h4 class="card-title">Threaded Binary Tree</h4>
-                            <p class="card-text">The main objective of this project is to implement a threaded binary tree and compare its performance to a standard binary tree in terms of traversal time and space complexity. </p><br>
+                            <p class="card-text">The main objective of this project is to implement a threaded binary tree and compare its performance to a standard binary tree in terms of traversal time and space complexity.</p>
                             <div class="text-center">
                                 <a href="https://github.com/Andororo/Threaded-Binary.git" class="btn btn-dark">Link</a>
                             </div>
@@ -287,10 +265,9 @@
                         <img class="card-img-top" src="images/portfolioImage4.jpg" alt="Card image" style="width:100%">
                         <div class="card-body">
                             <h4 class="card-title">Sneaker Bot</h4>
-                            <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                            <div class="text-center">
-                                <a href="#" class="btn btn-dark">Link</a>
-                            </div>
+                            <p class="card-text">Built a bot in Javascript that takes an item and check-out within seconds of running.
+                                Utilizing Puppeteer API to control headless Chrome or Chromium over the DevTools.
+                                Searches the web and uses HTML tags to collect data and use them as needed</p>
                         </div>
                     </div>
                 </div>
@@ -303,31 +280,27 @@
             <h1 class="text-center">Contact Me</h1>
             <div class="row mt-4">
                 <div class="col-lg-6">
-                    <!-- to edit google map goto https://www.embed-map.com type your location, generate html code and copy the html  -->
                     <div style="max-width:100%;overflow:hidden;color:red;width:500px;height:500px;">
                         <div id="embedded-map-canvas" style="height:100%; width:100%;max-width:100%;">
-                            <iframe style="height:100%;width:100%;border:0;" frameborder="0" src="https://www.google.com/maps/embed/v1/place?q=Seattle,+WA,+USA&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8">
+                            <iframe style="height:100%;width:100%;border:0;" frameborder="0" 
+                                src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCDCn1-FFxA_mFinaGWbIFlf8h1KY9Aezw&q=Seattle+WA">
                             </iframe>
                         </div>
-                        <a class="google-maps-html" href="https://kbj9qpmy.com/hrn" id="authmaps-data">InMotion Hosting</a>
-                            <style>#embedded-map-display img{max-height:none;max-width:none!important;background:none!important;}
-                            </style>
-                        </div>
+                    </div>
                 </div>
-
-                <div class="col-lg-6">
-                    <!-- form fields -->
-                    <form method="post" action="mail.php">
+                    <div class="col-lg-6">
+                        <!-- form fields -->
                         <input type="text" name="name" id="name" class="form-control mt-3" placeholder="Name" required>
                         <input type="email" name="email" id="email" class="form-control mt-3" placeholder="Email" required>
                         <input type="text" name="subject" id="subject" class="form-control mt-3" placeholder="Subject" required>
                         <div class="mb-3 mt-3">
                             <textarea name="message" id="message" class="form-control" rows="5" id="comment" name="text" placeholder="Message"></textarea>
                         </div>
-                        <button class="btn btn-dark mt-3">Contact Me</button>
-                    </form>
-                    
-                </div>
+                        <div class="button-container">
+                            <button id="interactive-button" onclick="handleButtonClick()">Contact Me</button>
+                            <div class="button-overlay"></div>
+                          </div>                          
+                    </div>
                 </div>
             </div>
         </form>
