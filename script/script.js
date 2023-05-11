@@ -14,8 +14,16 @@ window.onscroll = function() {
 const navLinks = document.querySelectorAll('.nav-item')
 const menuToggle = document.getElementById('navbarSupportedContent')
 
+navLinks.forEach((l) => {
+  l.addEventListener('click', () => { new bootstrap.Collapse(menuToggle).toggle() })
+})
+
 const button = document.getElementById('interactive-button');
 const container = document.querySelector('.button-container');
+
+const menu = document.querySelector('#mobile-menu');
+const menuLinks = document.querySelector('.navbar__menu')
+const navLogo = document.querySelector('#navbar__logo')
 
 container.addEventListener('mousemove', moveButton);
 requestAnimationFrame(moveButton);
@@ -33,11 +41,6 @@ function moveButton(event) {
 function handleButtonClick() {
   // Handle button click event
 }
-
-
-navLinks.forEach((l) => {
-    l.addEventListener('click', () => { new bootstrap.Collapse(menuToggle).toggle() })
-})
 
 
 const form = document.getElementById('contact-form');
